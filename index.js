@@ -11,7 +11,6 @@ wss.on("connection", function connection(ws) {
   }, 1000);
   ws.on("message", function incoming(message) {
     console.log("received: %s", message);
-
     wss.clients.forEach(function each(client) {
       if (client !== ws && client.readyState === WebSocket.OPEN) {
         client.send(message);

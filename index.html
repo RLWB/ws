@@ -10,7 +10,8 @@
     <button onclick="handleClick">click</button>
   </body>
   <script>
-    const ws = new WebSocket("wss://nodejs-ws-rlwb.herokuapp.com");
+    const ws = new WebSocket("ws://nodejs-ws-rlwb.herokuapp.com:8888/");
+    // const ws = new WebSocket("ws://localhost:8888/");
     ws.onopen = () => {
       ws.send("发送数据");
     };

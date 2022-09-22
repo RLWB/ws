@@ -22,4 +22,4 @@ wss.on("connection", function connection(ws) {
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
-server.listen(8888, () => console.log(`Lisening on port :8888`));
+server.listen(3001, () => console.log(`Lisening on port :3001`));
